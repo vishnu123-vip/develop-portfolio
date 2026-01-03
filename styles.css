@@ -1,0 +1,494 @@
+/* Responsive professional portfolio styles */
+:root {
+    --bg: #0f1724;
+    --card: #0b1220;
+    --muted: #9aa4b2;
+    --accent1: #667eea;
+    --accent2: #764ba2;
+    --glass: rgba(255, 255, 255, 0.04);
+    --glass-2: rgba(255, 255, 255, 0.02);
+    --radius: 12px;
+    --max-width: 1100px;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: linear-gradient(180deg, #071026 0%, #07111a 100%);
+    color: #e6eef8;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 28px
+}
+
+.site-header {
+    backdrop-filter: blur(6px);
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background: linear-gradient(180deg, rgba(11, 17, 32, 0.6), rgba(11, 17, 32, 0.35));
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03)
+}
+
+.nav-row {
+    display: flex;
+    align-items: center;
+    gap: 16px
+}
+
+.brand {
+    font-weight: 700;
+    color: var(--accent1);
+    text-decoration: none;
+    font-size: 1.1rem
+}
+
+.nav {
+    flex: 1
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 18px;
+    justify-content: center
+}
+
+.nav-list a {
+    color: inherit;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 8px;
+    transition: all .18s
+}
+
+.nav-list a:hover {
+    background: var(--glass)
+}
+
+.nav-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center
+}
+
+.search {
+    padding: 8px 12px;
+    border-radius: 10px;
+    background: var(--glass-2);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    color: inherit;
+    min-width: 200px
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: 0;
+    color: inherit;
+    font-size: 1.4rem
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 28px;
+    align-items: center;
+    padding-top: 44px;
+    padding-bottom: 44px
+}
+
+.hero-left {
+    display: flex;
+    justify-content: center
+}
+
+.avatar {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 14px 40px rgba(102, 126, 234, 0.14);
+    transform: translateY(0) rotate(0deg);
+    transition: transform .6s cubic-bezier(.2, .9, .2, 1), box-shadow .3s;
+    position: relative;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block
+}
+
+.avatar .social {
+    position: absolute;
+    left: 12px;
+    bottom: 10px;
+    display: flex;
+    gap: 8px;
+    flex-direction: column
+}
+
+.avatar .social a {
+    display: inline-block;
+    padding: 6px 8px;
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    border-radius: 8px;
+    font-size: 0.78rem;
+    text-decoration: none
+}
+
+.hero-right .name {
+    font-size: 2rem;
+    margin: 0 0 6px 0
+}
+
+.role-desc {
+    font-size: 1.05rem;
+    color: var(--muted);
+    margin: 6px 0 14px
+}
+
+.hero-cta {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 10px 0 14px
+}
+
+.btn.primary {
+    background: linear-gradient(90deg, var(--accent1), var(--accent2));
+    border: none;
+    color: #fff
+}
+
+.btn {
+    padding: 10px 12px;
+    border-radius: 10px
+}
+
+.tech-list {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 8px 0
+}
+
+.hero-blurb {
+    color: var(--muted);
+    margin-top: 12px;
+    max-width: 60ch
+}
+
+/* typing cursor */
+#typed {
+    font-weight: 700;
+    color: var(--accent1)
+}
+
+.typed-cursor {
+    display: inline-block;
+    width: 10px;
+    background: var(--accent1);
+    height: 18px;
+    margin-left: 6px;
+    vertical-align: middle;
+    animation: blink 1s steps(2, end) infinite
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0
+    }
+}
+
+/* responsive tweaks for hero content */
+@media (max-width:900px) {
+    .avatar {
+        width: 180px;
+        height: 180px;
+        margin: 0 auto
+    }
+
+    .hero-right {
+        text-align: center
+    }
+
+    .hero-right .name {
+        font-size: 1.6rem
+    }
+
+    .hero-blurb {
+        max-width: unset
+    }
+
+    .hero-cta {
+        justify-content: center
+    }
+}
+
+.hero-right .name {
+    font-size: 2rem;
+    margin: 0
+}
+
+.role-object {
+    background: linear-gradient(90deg, var(--accent1), var(--accent2));
+    padding: 12px;
+    border-radius: 10px;
+    margin: 12px 0;
+    color: white
+}
+
+.role-object pre {
+    margin: 0;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.9rem;
+    opacity: .95
+}
+
+.tech {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap
+}
+
+.tech-pill {
+    background: rgba(255, 255, 255, 0.04);
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: .85rem;
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(12px) scale(.98);
+    transition: transform .45s cubic-bezier(.2, .9, .2, 1), opacity .45s ease, box-shadow .25s;
+}
+
+.tech-pill.revealed {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.tech-pill:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 8px 26px rgba(118, 75, 162, 0.12);
+}
+
+/* subtle shimmer for select pills */
+.tech-pill:nth-child(odd).revealed {
+    animation: pop .45s ease both
+}
+
+@keyframes pop {
+    0% {
+        transform: translateY(8px) scale(.96);
+        opacity: 0
+    }
+
+    60% {
+        transform: translateY(-6px) scale(1.06)
+    }
+
+    100% {
+        transform: translateY(0) scale(1)
+    }
+}
+
+.section {
+    padding: 36px 0
+}
+
+.section h2 {
+    margin: 0 0 8px 0
+}
+
+.muted {
+    color: var(--muted);
+    margin: 0 0 16px 0
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px
+}
+
+.skill-card {
+    background: var(--card);
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(2, 6, 23, 0.6);
+    transition: transform .25s
+}
+
+.skill-card:hover {
+    transform: translateY(-6px)
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px
+}
+
+.project-card {
+    display: flex;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 30px rgba(2, 6, 23, 0.6);
+    transition: transform .24s
+}
+
+.project-card:hover {
+    transform: translateY(-8px) rotate(-.4deg)
+}
+
+.project-media {
+    min-width: 88px;
+    background: linear-gradient(180deg, var(--accent1), var(--accent2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700
+}
+
+.project-body {
+    padding: 14px
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 12px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    color: inherit;
+    text-decoration: none;
+    margin-top: 8px
+}
+
+.small {
+    color: var(--muted);
+    font-size: .88rem
+}
+
+.cert-list {
+    list-style: disc;
+    margin-left: 20px
+}
+
+.education-card {
+    background: var(--glass);
+    padding: 12px;
+    border-radius: 10px
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px
+}
+
+.contact-item a {
+    color: var(--accent1);
+    text-decoration: none
+}
+
+.site-footer {
+    padding: 28px 0;
+    color: var(--muted);
+    text-align: center
+}
+
+/* responsive */
+@media (max-width:900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 16px
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-list {
+        display: none
+    }
+
+    .menu-toggle {
+        display: block
+    }
+
+    .search {
+        min-width: 120px
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr
+    }
+}
+
+/* small */
+@media (max-width:420px) {
+    .brand {
+        font-size: 1rem
+    }
+
+    .avatar {
+        width: 160px;
+        height: 160px
+    }
+
+    .hero-right .name {
+        font-size: 1.5rem
+    }
+}
+
+/* highlight animation for search */
+.match {
+    animation: highlight 2s ease-in-out;
+}
+
+@keyframes highlight {
+    0% {
+        box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.35)
+    }
+
+    50% {
+        box-shadow: 0 8px 24px 6px rgba(102, 126, 234, 0.12)
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(102, 126, 234, 0)
+    }
+}
+
+/* utility */
+.hidden {
+    opacity: .08;
+    transform: scale(.995);
+    pointer-events: none
+}

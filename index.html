@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional Portfolio — Python Fullstack</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container nav-row">
+            <a class="brand" href="#">MyPortfolio</a>
+            <nav class="nav" id="mainNav">
+                <ul class="nav-list">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#education">Education</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <input id="searchInput" class="search" type="search" placeholder="Search page..."
+                    aria-label="Search page" />
+                <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero container" data-search>
+            <div class="hero-left">
+                <div class="avatar" id="avatar">
+                    <img src="/vishnu.jpeg" alt=""/>
+                    <ul class="social">
+                        <li><a href="https://github.com/yourusername" aria-label="GitHub">GitHub</a></li>
+                        <li><a href="https://linkedin.com/in/yourprofile" aria-label="LinkedIn">LinkedIn</a></li>
+                        <li><a href="mailto:you@example.com" aria-label="Email">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hero-right">
+                <h1 class="name">Hi, I'm <span class="firstname">Vishnu</span></h1>
+                <p class="role-desc">I'm a <span id="typed"></span></p>
+                <img src="assets/me.jpg" alt=""/>
+                <a class="btn primary" href="#contact">Contact Me</a>
+                <a class="btn" href="#projects">See Projects</a>
+                <a class="btn" href="/resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+            </div>
+
+            <div class="tech-list">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">Django</span>
+                <span class="tech-pill">React</span>
+                <span class="tech-pill">FastAPI</span>
+                <span class="tech-pill">Postgres</span>
+            </div>
+
+            <p class="hero-blurb">I design and build scalable web applications, APIs and polished user interfaces.
+                Currently focused on production-ready systems, observability and developer experience.</p>
+            </div>
+        </section>
+
+        <section id="skills" class="section container" data-search>
+            <h2>Technical Skills</h2>
+            <p class="muted">Skills tailored to the role: Python Fullstack Developer.</p>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>Django / Flask</li>
+                        <li>REST & GraphQL</li>
+                        <li>Celery, Redis</li>
+                        <li>PostgreSQL, MySQL</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>React / Vue</li>
+                        <li>TypeScript / JS</li>
+                        <li>Responsive UI</li>
+                        <li>Accessibility</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>DevOps & Tools</h3>
+                    <ul>
+                        <li>Git, Docker</li>
+                        <li>CI/CD</li>
+                        <li>AWS / Heroku</li>
+                        <li>Monitoring & Logging</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section container" data-search>
+            <h2>Projects</h2>
+            <p class="muted">Selected work demonstrating fullstack experience.</p>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-media">API</div>
+                    <div class="project-body">
+                        <h3>Inventory API</h3>
+                        <p>High-throughput inventory management REST API built with Django REST Framework and Postgres.
+                        </p>
+                        <p class="small">Tech: Django, DRF, Postgres, Docker</p>
+                        <a class="btn" href="#">View repo</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-media">Web</div>
+                    <div class="project-body">
+                        <h3>Task Manager</h3>
+                        <p>Fullstack task management app with realtime updates and role-based access.</p>
+                        <p class="small">Tech: Flask, React, Socket.IO, Redis</p>
+                        <a class="btn" href="#">Live demo</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-media">ML</div>
+                    <div class="project-body">
+                        <h3>Recommendation Engine</h3>
+                        <p>Personalized recommendations using collaborative filtering and fast API endpoints.</p>
+                        <p class="small">Tech: Python, Pandas, FastAPI, PostgreSQL</p>
+                        <a class="btn" href="#">Read more</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="certifications" class="section container" data-search>
+            <h2>Certifications</h2>
+            <ul class="cert-list">
+                <li>Certified Python Developer — Python Institute</li>
+                <li>Fullstack Web Development — Coursera</li>
+            </ul>
+        </section>
+
+        <section id="education" class="section container" data-search>
+            <h2>Education</h2>
+            <div class="education-card">
+                <h3>B.Sc. in Computer Science</h3>
+                <p>University — Year</p>
+            </div>
+        </section>
+
+        <section id="contact" class="section container" data-search>
+            <h2>Contact & Links</h2>
+            <div class="contact-grid">
+                <div class="contact-item"><strong>GitHub:</strong> <a
+                        href="https://github.com/yourusername">github.com/yourusername</a></div>
+                <div class="contact-item"><strong>LinkedIn:</strong> <a
+                        href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></div>
+                <div class="contact-item"><strong>Email:</strong> <a href="mailto:you@example.com">you@example.com</a>
+                </div>
+                <div class="contact-item"><strong>Phone:</strong> <a href="tel:+1234567890">+1 234 567 890</a></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer container">
+        <small>© 2026 Vishnu — Python Fullstack Developer</small>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
